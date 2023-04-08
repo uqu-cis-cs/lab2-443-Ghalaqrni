@@ -12,6 +12,8 @@ import java.util.Scanner;
 public class Garage{
 
     /************ Part 1 **************/
+
+    private Car [] cars = new Car[3];
     /**
      * Decalre an instance variable named cars
      * as an array of Car type
@@ -23,6 +25,7 @@ public class Garage{
      */
 
     /************ Part 2 **************/
+    public static int countCars = 0;
     /**
      * Decalre a static/class variable named countCars
      * Make sure its public
@@ -33,6 +36,12 @@ public class Garage{
      */
 
     /************ Part 3 **************/
+
+    public Garage (){
+     	   for(int i=0; i<cars.length; i++){
+             cars[i]= new Car();
+            }
+     }
     /**
      * Define a default constructor to create
      * all the elements of cars
@@ -47,6 +56,27 @@ public class Garage{
      */
 
     /************ Part 4 **************/
+    public void addCar(String model){
+        boolean flag = false ;
+        for(int i=0 ; i < countCars ; i++){
+            if ( cars [0].getmodel().equals(model)){
+                flag = true ;
+                cars[i].moveCarIn();
+            }
+        }
+        if (!flag){
+            if (countCars<cars.length){
+                Car c = new Car ();
+                c.setmodel(model);
+                cars[countCars].moveCarIn();
+            }
+            else {
+                System.out.println("full garage ");
+            }
+        }
+        
+
+    }
     /**
      * Define addCar(String parameter) that adds a new car (by model) to the garage 
      * and set its flag to true; 
@@ -62,6 +92,18 @@ public class Garage{
 
 
     /************ Part 5 **************/
+     public void moveOut(String model){
+        
+        for(int i =0 ; i<countCars;i++)
+        {
+            if (cars[i].getmodel().equals(model))
+            {
+          
+                cars[i].moveCarOut();
+            }
+        }
+  
+    }
     /**
      * Define moveOut(String) that moves the car (by model) out of the garage; 
      * hint you must first search if the car is in the list of cars, 
@@ -75,6 +117,18 @@ public class Garage{
 
 
     /************ Part 6 **************/
+     public void moveIn(String model){
+      
+        for(int i =0 ; i<countCars;i++)
+        {
+            if (cars[i].getmodel().equals(model))
+            {
+          
+                cars[i].moveCarIn();
+            }
+        }
+  
+    }
     /**
      * Define moveOut(String) that moves the car (by model) into the garage; 
      * hint you must first search if the car is in the list of cars, 
@@ -87,6 +141,12 @@ public class Garage{
 
 
     /************ Part 7 **************/
+    
+   public void listCars() {
+        for (int i = 0; i < countCars; i++) {
+            System.out.println("Car " + (i+1) + ": " + cars[i].getmodel());
+        }
+    } 
     /**
      * Define listCars() to display/list all the cars in the garage;
      * Note: method returns NO data
