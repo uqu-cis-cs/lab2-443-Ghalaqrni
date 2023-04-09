@@ -38,9 +38,9 @@ public class Garage{
     /************ Part 3 **************/
 
     public Garage (){
-     	   for(int i=0; i<cars.length; i++){
-             cars[i]= new Car();
-            }
+      for(int i=0; i<cars.length; i++){
+           cars[i]= new Car();
+        }
      }
     /**
      * Define a default constructor to create

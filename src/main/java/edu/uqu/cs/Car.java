@@ -27,9 +27,10 @@ public class Car{
 
     /************ Part 2 **************/
     public void Car (){
-        this.model= "";
-        this.inOutGarage = false;
-    }
+     this.model= "";
+     this.inOutGarage = false;
+
+    }  
     /**
      * Define a default constructor and set 
      * all instance variables to their default values
@@ -42,14 +43,12 @@ public class Car{
      */
 
     /************ Part 3 **************/
-    public String getmodel(){
-
-        return this.model;
-    }
-    public boolean getInOutGarage(){
-
-        return this.inOutGarage;
-    }
+      public String getmodel(){
+         return this.model;
+        }
+      public boolean getInOutGarage(){
+         return this.inOutGarage;
+        }
 
     /**
      * Define all getter methods below
@@ -62,12 +61,12 @@ public class Car{
 
 
     /************ Part 4 **************/
-    public void setmodel (String m){
-        this.model= m;
-    }
-    public void setInOutGarage (boolean g){
-        this.inOutGarage= g;
-    }
+      public void setmodel (String m){
+          this.model= m;
+        }
+      public void setInOutGarage (boolean g){
+         this.inOutGarage= g;
+        }
     /**
      * Define all setter methods below
      * for each instance variable
